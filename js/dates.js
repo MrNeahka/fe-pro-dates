@@ -29,6 +29,7 @@ function getDay(date, lang) {
 // Принимает объект даты, и должно вернуть компоненты даты в виде строки.
 // Вид должен быть такой 12:02(часы и минуты), то есть если у вас одно число на одном из
 // компонентов, то добавляем 0 перед ним
+
 function formatTime(date) {
   const minutes = date.getMinutes();
   const hours = date.getHours();
