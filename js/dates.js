@@ -31,10 +31,10 @@ function getDay(date, lang) {
 // компонентов, то добавляем 0 перед ним
 
 function formatTime(date) {
-  const minutes = date.getMinutes();
-  const hours = date.getHours();
+  /*const minutes = date.getMinutes();
+  const hours = date.getHours();*/
 
-  if (minutes < 10 && hours < 10) {
+  /*if (minutes < 10 && hours < 10) {
     return `0${hours}:0${minutes}`;
   } else if (hours < 10) {
     return `0${hours}:${minutes}`;
@@ -42,7 +42,11 @@ function formatTime(date) {
     return `${hours}:0${minutes}`;
   } else {
     return `${hours}:${minutes}`;
-  }
+  }*/
+  return `${date.getHours().toString().padStart(2, 0)}:${date
+    .getMinutes()
+    .toString()
+    .padStart(2, 0)}`;
 }
 
 /*
